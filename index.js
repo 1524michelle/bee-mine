@@ -16,7 +16,6 @@ document.getElementById('bee-img').addEventListener('click', function() {
     const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti({
         confettiNumber: 100,
-        emojis: ['✨','🐝','🍯','🌼'],
-        emojiSize: 40
+        emojis: ['✨','🐝','🍯','🌼']
     });
 });
