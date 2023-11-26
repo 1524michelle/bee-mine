@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    text-align: center;
+    font-family: 'Love Ya Like A Sister', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
