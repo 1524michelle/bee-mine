@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <!-- scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
 <body>
     <div>
@@ -22,4 +22,14 @@
     </div>
 
 </body>
+
+<script>
+    document.getElementById('tired-bees').addEventListener('click', function() {
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti({
+            confettiNumber: 100,
+            emojis: ['🫧','🎀','🩷', '🏹','💘']
+        });
+    });
+</script>
 </html>

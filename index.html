@@ -15,7 +15,7 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script src="index.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
 </head>
 <body>
     <div>
@@ -23,9 +23,46 @@
         <img src="images/bee.jpeg" alt="two bees drawing a heart between them" id="bee-img" />
         <br>
         <div id="buttons-container">
-            <button type="button"><a href="./yes.html">yes</a></button>
+            <button type="button" id="yes-btn"><a href="./yes.html">yes</a></button>
             <button type="button" id="tricky">no</button>
         </div>
     </div>
 </body>
+
+<script>
+    // moves the no button away from mouse on hover
+    $(function() {
+        $("#tricky").on({
+            mouseover: function() {
+                // Get viewport dimensions
+                var viewportWidth = $(window).width();
+                var viewportHeight = $(window).height();
+
+                // Calculate maximum left and top positions
+                var maxLeft = viewportWidth - $(this).outerWidth();
+                var maxTop = viewportHeight - $(this).outerHeight();
+
+                // Calculate random left and top positions within viewport
+                var randomLeft = Math.random() * maxLeft;
+                var randomTop = Math.random() * maxTop;
+
+                // Apply new position
+                $(this).css({
+                    position: 'absolute',
+                    left: randomLeft + "px",
+                    top: randomTop + "px",
+                });
+            }
+        });
+    });
+
+    // custom confetti pops when image is clicked
+    document.getElementById('bee-img').addEventListener('click', function() {
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti({
+            confettiNumber: 100,
+            emojis: ['✨','🐝','🍯','🌼']
+        });
+    });
+</script>
 </html>

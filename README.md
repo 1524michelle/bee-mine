@@ -4,6 +4,4 @@ a fun page that guarantees a 100% success rate for any valentine your heart desi
 
 hosted at https://1524michelle.github.io/bee-mine.
 
-### easter egg
-
-bee emoji confetti from **js-confetti** at https://github.com/loonywizard/js-confetti when the image is clicked
+uses emoji confetti from **js-confetti** at https://github.com/loonywizard/js-confetti.
