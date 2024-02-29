@@ -1,9 +1,9 @@
 # bee my valentine?
 
-a fun page that guarantees a 100% success rate for any valentine your heart desires!
+a fun page that guarantees a 100% success rate for any valentine your heart desires! 
 
-### easter eggs
+hosted at https://1524michelle.github.io/bee-mine.
 
-1. bee emoji confetti from **js-confetti** at https://github.com/loonywizard/js-confetti when the image is clicked
+### easter egg
 
-2. **[in progress]** i'm trying out some fun text effects to make the page "yes" redirects to ~~unnecessarily creepy~~ more fun haha
+bee emoji confetti from **js-confetti** at https://github.com/loonywizard/js-confetti when the image is clicked

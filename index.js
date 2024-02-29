@@ -2,10 +2,23 @@
 $(function() {
     $("#tricky").on({
         mouseover: function() {
-            $(this).css('position', 'relative');
+            // Get viewport dimensions
+            var viewportWidth = $(window).width();
+            var viewportHeight = $(window).height();
+
+            // Calculate maximum left and top positions
+            var maxLeft = viewportWidth - $(this).outerWidth();
+            var maxTop = viewportHeight - $(this).outerHeight();
+
+            // Calculate random left and top positions within viewport
+            var randomLeft = Math.random() * maxLeft;
+            var randomTop = Math.random() * maxTop;
+
+            // Apply new position
             $(this).css({
-                left: (Math.random() * (200 - 30) + 50) + "px",
-                top: (Math.random() * (200 - 30) + 50) + "px",
+                position: 'absolute',
+                left: randomLeft + "px",
+                top: randomTop + "px",
             });
         }
     });
